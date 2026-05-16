@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tara Tambay</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <h1>Tara Tambay!</h1>
+      </div>
+
+      <nav class="nav">
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Suggestions</a>
+      </nav>
+
+      <div class="online-status" id="onlineCount">🟢 Online: 0</div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+      <section class="chat-container">
+        <!-- MESSAGES -->
+        <div class="messages" id="messages"></div>
+
+        <!-- INPUT -->
+        <div class="input-area">
+          <input type="text" id="input" placeholder="Type your message..." />
+
+          <button onclick="sendMessage()">Send</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
