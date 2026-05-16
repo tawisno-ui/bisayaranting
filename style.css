@@ -8,14 +8,20 @@
 
 /* ========== BODY ========== */
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: #0b0f14;
   color: white;
-  height: 100vh;
 
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+
   overflow: hidden;
 }
 
@@ -36,7 +42,6 @@ body {
   padding: 0 24px;
 
   background: #111827;
-
   border-bottom: 1px solid #1f2937;
 
   z-index: 1000;
@@ -75,9 +80,9 @@ body {
 /* ========== MAIN ========== */
 
 .main {
-  margin-top: 70px;
+  flex: 1;
 
-  height: calc(100vh - 70px);
+  margin-top: 70px;
 
   display: flex;
   justify-content: center;
@@ -92,14 +97,12 @@ body {
 .chat-container {
   width: 100%;
   max-width: 900px;
-
   height: 100%;
 
   display: flex;
   flex-direction: column;
 
   background: #111827;
-
   border: 1px solid #1f2937;
   border-radius: 18px;
 
@@ -112,6 +115,7 @@ body {
   flex: 1;
 
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   padding: 20px;
 
@@ -143,15 +147,12 @@ body {
 
 .message {
   max-width: 75%;
-
   padding: 12px 15px;
 
   background: #1f2937;
-
   border-radius: 14px;
 
   color: #f3f4f6;
-
   line-height: 1.4;
 
   word-wrap: break-word;
@@ -166,8 +167,9 @@ body {
   padding: 16px;
 
   border-top: 1px solid #1f2937;
-
   background: #0f172a;
+
+  flex-shrink: 0;
 }
 
 /* INPUT */
@@ -225,13 +227,23 @@ body {
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    height: auto;
+    padding: 10px 16px;
   }
 
   .nav {
-    flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .online-status {
+    width: 100%;
+    text-align: center;
   }
 
   .message {
